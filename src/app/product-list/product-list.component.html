@@ -15,6 +15,10 @@
     <a [title]="product.name + ' の詳細はこちら'">
       {{ product.name }}
     </a>
+
+    <p *ngIf="prodcut.description">詳細: {{ product.desription }}</p>
+
+    <button (click)="share()">share</button>
   </h3>
 </div>
 

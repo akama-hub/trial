@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-list/product-detail.component';
 
 // ここで各種セットアップをしていく
 @NgModule({
@@ -14,10 +15,17 @@ import { ProductListComponent } from './product-list/product-list.component';
     ReactiveFormsModule,
     RouterModule.forRoot([{ path: '', component: ProductListComponent }]),
     // routerLinkのパスを指定する
-    RouterModule.forRoot([{ path: 'topbar', component: TopBarComponentComponent }]),
+    RouterModule.forRoot([
+      { path: 'topbar', component: TopBarComponentComponent },
+    ]),
   ],
   // 使用するフォルダの種類
-  declarations: [AppComponent, TopBarComponent, ProductListComponent],
+  declarations: [
+    AppComponent,
+    TopBarComponent,
+    ProductListComponent,
+    ProductDetalComponent,
+  ],
   // 一番最初に呼び出すところ
   bootstrap: [AppComponent],
 })

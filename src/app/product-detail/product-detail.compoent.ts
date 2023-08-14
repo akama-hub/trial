@@ -5,11 +5,11 @@ import { products } from '../products';
 import { product } from '../shared/product.model';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-product-detail',
+  templateUrl: './product-detail.component.html',
+  styleUrls: ['./product-detail.component.css']
 })
-export class ProductListComponent {
+export class ProductDetailComponent {
   // importでとってきた情報を使う
   // products = products;
 

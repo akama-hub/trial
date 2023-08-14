@@ -8,7 +8,29 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = [...products];
+  // importでとってきた情報を使う
+  products = products;
+
+  students = {"太郎","次郎","三郎"};
+
+  // カーリーブレイシスに囲まれたところをjsonオブジェクトという
+  more_info_students = [
+    {
+      name: "太郎",
+      gender: "男",
+      age: 55
+    },
+    {
+      name: "次郎",
+      gender: "男",
+      age: 20
+    },
+    {
+      name: "三郎",
+      gender: "男",
+      age: 15
+    }
+  ];
 
   share() {
     window.alert('The product has been shared!');

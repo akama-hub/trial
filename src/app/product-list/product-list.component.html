@@ -1,5 +1,22 @@
 <h2>Products</h2>
 
+<div *ngFor="let student of students">
+  <h2>{{ student }}</h2>
+</div>
+
+<div *ngFor="let student of more_info_students">
+  <h3>{{ student.name }}</h3>
+  <p>{{ student.age }}</p>
+</div>
+
+<div *ngFor="let product of products">
+  <h3>
+    <!-- プロパティバインディング[] カーソルを合わせたときにでてくる補足情報-->
+    <a [title]="product.name + ' の詳細はこちら'">
+      {{ product.name }}
+    </a>
+  </h3>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

@@ -1,9 +1,27 @@
 <app-top-bar></app-top-bar>
-
+こんにちは
 <div class="container">
   <router-outlet></router-outlet>
+  <!-- <app-product-list></app-product-list> -->
 </div>
 
+<div>囲っただけでは意味がない。クラス等で指定する</div>
+<div class="font-red">cssでフォントのクラスを作ってみる</div>
+<h1>サイト名などのキャッチ～なもの</h1>
+<p>説明文などの標準のサイズ</p>
+
+<!-- ダブルカーリープレイシス{{}}の中に変数を置く -->
+<!-- 宣言ではconstまたはletを使う。 -->
+<h1>{{ price }}</h1>
+
+<!-- ボタンをクリックした時にadd100関数を呼び出す -->
+<button (click)="(add10)">ボタン</button>
+
+<a href="https://www.google.com"> 外部リンクの埋め込み</a>
+<!-- 新しいタブで開く -->
+<a target = "_balank" href="https://www.google.com"> 外部リンクの埋め込み</a>
+<!-- シングルページアクセス, app.moduleでパスの指定 -->
+<a routerLink="/topbar"> 外部リンクの埋め込み</a>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

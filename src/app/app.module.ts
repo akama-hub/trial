@@ -7,25 +7,21 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+// ここで各種セットアップをしていく
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+    RouterModule.forRoot([{ path: '', component: ProductListComponent }]),
+    // routerLinkのパスを指定する
+    RouterModule.forRoot([{ path: 'topbar', component: TopBarComponentComponent }]),
   ],
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  // 使用するフォルダの種類
+  declarations: [AppComponent, TopBarComponent, ProductListComponent],
+  // 一番最初に呼び出すところ
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
 
 /*
 Copyright Google LLC. All Rights Reserved.
